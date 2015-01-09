@@ -93,7 +93,7 @@ harden_ssh_brute() {
 }
 
 harden_ssh(){
-    sed -i 's/.*PermitRootLogin.*yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+    sed -i 's/.*PermitRootLogin.*yes/PermitRootLogin no/g' /etc/ssh/ssh_config
 }
 
 logwatch_reporter() {
