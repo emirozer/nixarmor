@@ -84,10 +84,14 @@ purge_at() {
 }
 
 disable_avahi() {
-    sudo update-rc.d -f avahi-daemon remove
+    update-rc.d -f avahi-daemon remove
     # The Avahi daemon provides mDNS/DNS-SD discovery support
     # (Bonjour/Zeroconf) allowing applications to discover services on the network.
 }
+
+disable_exim_pckgs() {
+    update-rc.d -f exim4 remove
+    }
 
 process_accounting() {
     # Linux process accounting keeps track of all sorts of details about which commands have been run on the server, who ran them, when, etc.
@@ -112,6 +116,7 @@ main() {
     process_accounting
     purge_at
     disable_avahi
+    disable_exim_pckgs
 }
 
 main "$@"
