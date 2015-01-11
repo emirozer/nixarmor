@@ -67,6 +67,16 @@ permission_narrowing() {
     chmod 600 /etc/sysctl.conf
 }
 
+disable_avahi(){
+    systemctl stop avahi-daemon.socket avahi-daemon.service
+    systemctl disable avahi-daemon.socket avahi-daemon.service
+}
+
+disable_postfix() {
+    systemctl stop postfix
+    systemctl disable postfix
+}
+
 kernel_tuning() {
     sysctl kernel.randomize_va_space=1
     
@@ -118,6 +128,8 @@ main() {
     logwatch_reporter
     remove_atd
     permission_narrowing
+    disable_avahi
+    disable_postfix
     kernel_tuning
 }
 
