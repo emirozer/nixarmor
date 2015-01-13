@@ -1,7 +1,7 @@
 ![Screenshot](https://raw.github.com/emirozer/nixarmor/master/docs/nixarmor.png)
 =======================
 ##Linux Hardening Automation Project[WIP]
-==============
+
 *This program comes with ABSOLUTELY NO WARRANTY!*
 
 *Be Advised, do NOT use in production environments!*
@@ -20,11 +20,11 @@
 
 
 ##USAGE
-========
+
 Clone the repository.
 
 	git clone https://github.com/emirozer/nixarmor.git
-	
+
 Run the related automation script based on your distribution.
 
 ###CHKROOTKIT & Cron Job
@@ -55,5 +55,5 @@ Note
 Save the file.
 
 Change the file permissions
-	
+
 	chmod 755 /etc/cron.daily/chkrootkit.sh
