@@ -39,7 +39,7 @@ harden_ssh(){
     sed -i 's/.*PermitRootLogin.*yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 }
 
-chkrootkit() {
+set_chkrootkit() {
     # check the github page for cronning this task
     yum -y install chkrootkit
     chkrootkit
@@ -127,7 +127,7 @@ main() {
     disable_root
     user_pass_expirations
     harden_ssh
-    chkrootkit
+    set_chkrootkit
     logwatch_reporter
     remove_atd
     permission_narrowing

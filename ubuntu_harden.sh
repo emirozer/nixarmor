@@ -64,7 +64,7 @@ purge_whoopsie() {
     apt-get --yes purge whoopsie
 }
 
-chkrootkit() {
+set_chkrootkit() {
     apt-get --yes install chkrootkit
     chkrootkit
     }
@@ -180,7 +180,7 @@ main() {
     purge_telnet
     purge_nfs
     purge_whoopsie
-    chkrootkit
+    set_chkrootkit
     disable_compilers
     firewall
     harden_ssh_brute
