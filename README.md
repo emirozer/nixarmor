@@ -1,7 +1,6 @@
 ![Screenshot](https://raw.github.com/emirozer/nixarmor/master/docs/nixarmor.png)
 =======================
-#WIP
-###Linux Hardening Automation Project
+##Linux Hardening Automation Project[WIP]
 ==============
 *This program comes with ABSOLUTELY NO WARRANTY!*
 
@@ -19,11 +18,20 @@
     logins and the disabling or removal of unnecessary services.[1]
 [1][Reference](http://en.wikipedia.org/wiki/Hardening_%28computing%29)
 
+
+##USAGE
+========
+Clone the repository.
+
+	git clone https://github.com/emirozer/nixarmor.git
+	
+Run the related automation script based on your distribution.
+
 ###CHKROOTKIT & Cron Job
 =============
-Chkrootkit is installed for ubuntu/debian and ran once.
+Chkrootkit is installed for ubuntu/debian/fedora and ran once.
 
-For centOS, **yum** won't serve this [package](http://www.chkrootkit.org/) so you have to get it manually.
+For **centOS**, **yum** won't serve this [package](http://www.chkrootkit.org/) so you have to get it manually.
 
 It is in your best interest to run chkrootkit daily.
 Here are some basic universal instructions:
