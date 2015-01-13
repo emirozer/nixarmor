@@ -18,3 +18,34 @@
     removal of unnecessary software, unnecessary usernames or
     logins and the disabling or removal of unnecessary services.[1]
 [1][Reference](http://en.wikipedia.org/wiki/Hardening_%28computing%29)
+
+###CHKROOTKIT & Cron Job
+=============
+Chkrootkit is installed for ubuntu/debian and ran once.
+
+For centOS, **yum** won't serve this [package](http://www.chkrootkit.org/) so you have to get it manually.
+
+It is in your best interest to run chkrootkit daily.
+Here are some basic universal instructions:
+
+	vi /etc/cron.daily/chkrootkit.sh
+
+	#!/bin/bash
+	cd /your_installpath/chkrootkit-0.42b/
+	./chkrootkit | mail -s “Daily chkrootkit from Servername” admin@youremail.com
+
+
+Note
+
+1. Replace ‘your_installpath’ with the actual path to where you unpacked Chkrootkit.
+
+2. Change ‘Servername’ to the server which you are running.
+
+3. Change ‘admin@youremail.com’ to your actual email address where the script will mail you.
+
+
+Save the file.
+
+Change the file permissions
+	
+	chmod 755 /etc/cron.daily/chkrootkit.sh
