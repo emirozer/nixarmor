@@ -64,6 +64,11 @@ purge_whoopsie() {
     apt-get --yes purge whoopsie
 }
 
+chkrootkit() {
+    apt-get --yes install chkrootkit
+    chkrootkit
+    }
+
 disable_compilers() {
     chmod 000 /usr/bin/byacc
     chmod 000 /usr/bin/yacc
@@ -175,6 +180,7 @@ main() {
     purge_telnet
     purge_nfs
     purge_whoopsie
+    chkrootkit
     disable_compilers
     firewall
     harden_ssh_brute
