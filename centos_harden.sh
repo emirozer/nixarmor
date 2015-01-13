@@ -103,9 +103,6 @@ kernel_tuning() {
     # Disables the magic-sysrq key
     sysctl kernel.sysrq=0
     
-    # Turn off the tcp_sack
-    sysctl net.ipv4.tcp_sack=0
-
     # Turn off the tcp_timestamps
     sysctl net.ipv4.tcp_timestamps=0
 
