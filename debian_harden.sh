@@ -78,6 +78,11 @@ logwatch_reporter() {
     mv /etc/cron.daily/00logwatch.dpkg-new /etc/cron.weekly/    
 }
 
+chkrootkit() {
+    apt-get --yes install chkrootkit
+    chkrootkit
+}
+
 purge_at() {
     apt-get --yes purge at
     # less layers equals more security
@@ -113,6 +118,7 @@ main() {
     harden_ssh_brute
     harden_ssh
     logwatch_reporter
+    chkrootkit
     process_accounting
     purge_at
     disable_avahi
