@@ -118,12 +118,7 @@ purge_atd() {
 disable_avahi() {
     # The Avahi daemon provides mDNS/DNS-SD discovery support
     # (Bonjour/Zeroconf) allowing applications to discover services on the network.
-    cd
-    cd ..
-    cd ..
-    cd /etc/init/
-    touch avahi-daemon.override
-    echo "manual" > avahi-daemon.override
+    update-rc.d avahi-daemon disable
 }
 
 process_accounting() {
