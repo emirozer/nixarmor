@@ -37,7 +37,7 @@ user_pass_expirations() {
 }
 
 harden_ssh(){
-    sed -i 's/.*PermitRootLogin.*yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+    sudo sh -c 'echo "PermitRootLogin no" >> /etc/ssh/sshd_config'
 }
 
 logwatch_reporter() {
