@@ -27,6 +27,14 @@ Clone the repository.
 
 Run the related automation script based on your distribution.
 
+**OR**
+
+You can try the environment via using vagrant.
+Go to the /vagrant/.. dir and pick the distro you are interested in.
+
+    vagrant up
+
+*I am assuming you have* [vagrant](https://www.vagrantup.com) *on your system packages for his task.*
 ###CHKROOTKIT & Cron Job
 =============
 Chkrootkit is installed for ubuntu/debian/fedora and ran once.
