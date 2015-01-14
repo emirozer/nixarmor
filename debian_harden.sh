@@ -108,6 +108,43 @@ process_accounting() {
     # To show users' connect times, run ac. To show information about commands previously run by users, run sa. To see the last commands run, run lastcomm.
 }
 
+kernel_tuning() {
+    sudo sh -c 'echo "kernel.randomize_va_space=1" >> /etc/sysctl.conf'
+    
+    # Enable IP spoofing protection
+    sudo sh -c 'echo "net.ipv4.conf.all.rp_filter=1" >> /etc/sysctl.conf'
+
+    # Disable IP source routing
+    sudo sh -c 'echo "net.ipv4.conf.all.accept_source_route=0" >> /etc/sysctl.conf'
+    
+    # Ignoring broadcasts request
+    sudo sh -c 'echo "net.ipv4.icmp_echo_ignore_broadcasts=1" >> /etc/sysctl.conf'
+            
+    # Make sure spoofed packets get logged
+    sudo sh -c 'echo "net.ipv4.conf.all.log_martians=1" >> /etc/sysctl.conf'
+    sudo sh -c 'echo "net.ipv4.conf.default.log_martians=1" >> /etc/sysctl.conf'
+    
+    # Disable ICMP routing redirects
+    sudo sh -c 'echo "net.ipv4.conf.all.accept_redirects=0" >> /etc/sysctl.conf'
+    sudo sh -c 'echo "net.ipv6.conf.all.accept_redirects=0" >> /etc/sysctl.conf'
+    sudo sh -c 'echo "net.ipv4.conf.all.send_redirects=0" >> /etc/sysctl.conf'
+
+    # Disables the magic-sysrq key
+    sudo sh -c 'echo "kernel.sysrq=0" >> /etc/sysctl.conf'
+        
+    # Turn off the tcp_timestamps
+    sudo sh -c 'echo "net.ipv4.tcp_timestamps=0" >> /etc/sysctl.conf'
+    
+    # Enable TCP SYN Cookie Protection
+    sudo sh -c 'echo "net.ipv4.tcp_syncookies=1" >> /etc/sysctl.conf'
+    
+    # Enable bad error message Protection
+    sudo sh -c 'echo "net.ipv4.icmp_ignore_bogus_error_responses=1" >> /etc/sysctl.conf'
+    
+    # RELOAD WITH NEW SETTINGS
+    /sbin/sysctl -p
+}
+
 main() {
     sys_upgrades
     unattended_upg
@@ -123,6 +160,7 @@ main() {
     purge_at
     disable_avahi
     disable_exim_pckgs
+    kernel_tuning
 }
 
 main "$@"
