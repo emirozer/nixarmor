@@ -1,6 +1,6 @@
 ![Screenshot](https://raw.github.com/emirozer/nixarmor/master/docs/nixarmor.png)
 =======================
-##Linux Hardening Automation Project[WIP]
+##Linux Hardening Automation Project
 
 *This program comes with ABSOLUTELY NO WARRANTY!*
 
