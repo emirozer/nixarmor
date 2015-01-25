@@ -34,16 +34,6 @@ disable_root() {
     # sudo passwd -l root
 }
 
-search_privacy() {
-    wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
-    # https://fixubuntu.com/
-    # If you're an Ubuntu user and you're using the default settings,
-    # each time you start typing in Dash
-    # (to open an application or search for a file on your computer),
-    # your search terms get sent to a variety of third parties,
-    # some of which advertise to you.
-}
-
 purge_telnet() {
     # Unless you need to specifically work with telnet, purge it
     # less layers = more sec
@@ -169,7 +159,6 @@ main() {
     sys_upgrades
     unattended_upg
     disable_root
-    search_privacy
     purge_telnet
     purge_nfs
     purge_whoopsie
