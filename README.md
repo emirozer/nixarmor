@@ -2,6 +2,8 @@
 =======================
 ##Linux Hardening Automation Project
 
+![travis](https://travis-ci.org/emirozer/nixarmor.svg?branch=master)
+
 *This program comes with ABSOLUTELY NO WARRANTY!*
 
 *Be Advised, do NOT use in production environments!*
