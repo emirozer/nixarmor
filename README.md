@@ -36,7 +36,7 @@ Go to the /vagrant/.. dir and pick the distro you are interested in.
 
     vagrant up
 
-*I am assuming you have* [vagrant](https://www.vagrantup.com) *on your system packages for his task.*
+*I am assuming you have* [vagrant](https://www.vagrantup.com) *on your system packages for this task.*
 ###CHKROOTKIT & Cron Job
 =============
 Chkrootkit is installed for ubuntu/debian/fedora and ran once.
