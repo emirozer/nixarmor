@@ -18,7 +18,7 @@
     Reducing available vectors of attack typically includes the
     removal of unnecessary software, unnecessary usernames or
     logins and the disabling or removal of unnecessary services.[1]
-[1][Reference](http://en.wikipedia.org/wiki/Hardening_%28computing%29)
+[1][Hardening(computing)](http://en.wikipedia.org/wiki/Hardening_%28computing%29)
 
 
 ##USAGE
