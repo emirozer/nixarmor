@@ -71,4 +71,4 @@ Change the file permissions
 
 
 -
-Small note about unattanded updates: It is a good idea if and only if you compose your own black list..Meaning put everything that you find upgrading without supervision risky. http://askubuntu.com/questions/193773/can-i-configure-unattended-upgrades-to-not-upgrade-packages-that-require-a-reboo
+*Small note about unattanded updates:* It is a good idea if and only if you compose your own black list..Meaning put everything that you find upgrading without supervision risky. http://askubuntu.com/questions/193773/can-i-configure-unattended-upgrades-to-not-upgrade-packages-that-require-a-reboo
